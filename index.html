@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubic Chess</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@latest/build/three.module.js",
+                "three/": "https://unpkg.com/three@latest/"
+            }
+        }
+    </script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div id="ui">
+        <div id="top-bar">
+            <h1>CUBIC CHESS</h1>
+        </div>
+        <div id="game-info">
+            <p id="turn-text">White's turn</p>
+            <div id="coords">
+                File: 1 | Plane: 1 | Rank: 1
+            </div>
+        </div>
+        <div id="controls">
+            <div id="top-row">
+                <button type="button" id="front">↖</button>
+                <button type="button" id="up">↑</button>
+            </div>
+            <div id="mid-row">
+                <button type="button" id="left">←</button>
+                <button type="button" id="place">⊚</button>
+                <button type="button" id="right">→</button>
+            </div>
+            <div id="down-row">
+                <button type="button" id="down">↓</button>
+                <button type="button" id="back">↘</button>
+            </div>
+        </div>
+    </div>
+    <div id="toast"></div>
+    
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
