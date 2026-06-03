@@ -364,7 +364,7 @@ function getKingMoves(file, plane, rank, color) {
 function getPawnMoves(file, plane, rank, color) {
     const moves = [];
     const [fwd1, fwd2] = color === "white" ? [1, 1] : [-1, -1];
-    const isStarting = color === "white" ? (rank === 1) : (rank === 6);
+    const isStarting = color === "white" ? (rank === 1 && (plane === 0 || plane === 1)) : (rank === 6 && (plane === 6 || plane === 7));
 
     const r1 = rank + fwd1;
     if (r1 >= 0 && r1 < 8 && !getPiece(file, plane, r1)) {
